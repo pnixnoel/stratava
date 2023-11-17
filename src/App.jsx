@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter, Routes, Route} from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
@@ -22,7 +22,7 @@ const MainContent = styled.main`
 function App() {
   return (
     <AppContainer>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <MainContent>
           <Routes>
@@ -34,7 +34,7 @@ function App() {
           </Routes>
         </MainContent>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </AppContainer>
   );
 }
