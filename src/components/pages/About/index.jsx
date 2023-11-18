@@ -5,7 +5,7 @@ import About2 from "../../../assets/illustrations/about-2.svg";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 6rem;
+  padding: 3rem 6rem 1rem;
 `;
 const Heading = styled.span`
   font-size: 24px;

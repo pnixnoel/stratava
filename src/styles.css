@@ -4,3 +4,14 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
 }
+
+textarea::placeholder{
+  font-family: "Montserrat", "Menlo", "Roboto", sans-serif !important;
+  font-weight: 400;
+
+}
+
+input::placeholder{
+  font-family: "Montserrat", "Menlo", "Roboto", sans-serif !important;
+  font-weight: 400;
+}

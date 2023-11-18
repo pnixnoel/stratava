@@ -1,12 +1,11 @@
-import {HashRouter, Routes, Route} from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import PageNotFound from "./components/pages/PageNotFound";
-
+import Layout from "./components/Layout";
 import styled from "styled-components";
 
 const AppContainer = styled.div`
@@ -15,26 +14,20 @@ const AppContainer = styled.div`
   min-height: 100vh;
 `;
 
-const MainContent = styled.main`
-  flex-grow: 1;
-`;
+const HomeHeaderContent = ["Get the help you need, every step of the way", <>Strategic Guidance, Seamless Navigation <br/> Your Path to Success</>, "Offshore development with an onshore customer experience"]
 
 function App() {
   return (
     <AppContainer>
-      <HashRouter>
-        <Header />
-        <MainContent>
-          <Routes>
-            <Route path="/" index element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </MainContent>
-        <Footer />
-      </HashRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" index element={<Layout hasContactUs headingMessage={HomeHeaderContent}><Home /></Layout>} />
+          <Route path="/services" element={<Layout><Services /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          <Route path="*" element={<Layout><PageNotFound /></Layout>} />
+        </Routes>
+      </BrowserRouter>
     </AppContainer>
   );
 }

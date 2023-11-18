@@ -11,7 +11,6 @@ import Pencil from "../../../assets/icons/pencil.svg";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 6rem;
 `;
 const Heading = styled.span`
   font-size: 24px;

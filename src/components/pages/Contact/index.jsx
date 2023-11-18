@@ -3,7 +3,7 @@ import ContactForm from "../../ContactForm";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1rem 6rem;
+  padding: 3rem 6rem 1rem;
 `;
 const Heading = styled.span`
   font-size: 24px;
@@ -19,7 +19,7 @@ export default function Contact() {
     <Container>
       <Heading>Contact Us</Heading>
       <Form>
-        <ContactForm ButtonCenter />
+        <ContactForm buttonCenter />
       </Form>
     </Container>
   );

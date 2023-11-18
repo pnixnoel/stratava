@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../Primitives/Button"
 
 const Container = styled.div`
   display: flex;
@@ -15,24 +16,15 @@ const TextArea = styled.textarea`
   padding-top: 10px;
   padding-left: 10px;
 `;
-const Button = styled.button`
-  margin: 10px 0;
-  width: 72px;
-  height: 34px;
-  background-color: #92e3a9;
-  border: 1px solid;
-  cursor: pointer;
-  ${(props) => props.ButtonCenter && "margin: 10px auto;"};
-`;
 
-export default function ContactForm({ButtonCenter = false}) {
+export default function ContactForm({buttonCenter = false}) {
   return (
     <Container>
       <Input type="text" placeholder="Enter your name" />
       <Input type="email" placeholder="Enter your email" />
       <Input type="text" placeholder="Subject" />
-      <TextArea placeholder="Message" />
-      <Button ButtonCenter={ButtonCenter}>SEND</Button>
+      <TextArea placeholder="Enter your message" />
+      <Button buttonCenter={buttonCenter}>SEND</Button>
     </Container>
   );
 }
